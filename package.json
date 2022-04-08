@@ -1,0 +1,19 @@
+{
+  "name": "waly-tracking",
+  "version": "1.0.0",
+  "description": "Track application submission ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express.js",
+    "Node.js",
+    "React.js",
+    "MERN",
+    "JWT"
+  ],
+  "author": "Abdoulaye Binta Bah",
+  "license": "MIT"
+}
