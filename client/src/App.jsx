@@ -1,7 +1,9 @@
+import Home from './pages/Home';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Waly Tracking</h1>
+    <div>
+      <Home />
     </div>
   );
 }
