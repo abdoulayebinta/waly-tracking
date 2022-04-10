@@ -1,6 +1,6 @@
 import mainImg from '../assets/images/main.svg';
 import Wrapper from '../assets/wrappers/HomePage';
-import { Logo } from '../components/Logo';
+import { Logo } from '../components';
 
 const Home = () => {
   return (
