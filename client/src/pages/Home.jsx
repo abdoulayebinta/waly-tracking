@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import mainImg from '../assets/images/main.svg';
-import Wrapper from '../assets/wrappers/HomePage';
+import Wrapper from '../assets/styledComponents/HomePageStyle';
 import { Logo } from '../components';
 
 const Home = () => {

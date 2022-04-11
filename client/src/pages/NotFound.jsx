@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import img from '../assets/images/404-image.svg';
-import Wrapper from '../assets/wrappers/NotFoundPage';
+import Wrapper from '../assets/styledComponents/NotFoundPageStyle';
 
 const NotFound = () => {
   return (
