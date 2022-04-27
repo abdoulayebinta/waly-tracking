@@ -13,3 +13,16 @@ A full stack Job Tracking app built on MERN (MongoDB, Express.js, React.js and N
 - **Express.js**
 - **React.js**
 - **Node.js**
+
+### ENV Variables
+
+```sh
+npm install dotenv
+```
+
+```js
+import dotenv from 'dotenv';
+dotenv.congig();
+```
+
+- create .env file
