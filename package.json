@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Track application submission ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,7 +18,10 @@
   ],
   "author": "Abdoulaye Binta Bah",
   "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
   "dependencies": {
-    "react-router-dom": "^6.3.0"
+    "express": "^4.18.0"
   }
 }
