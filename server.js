@@ -1,20 +1,28 @@
 import express from 'express';
 import dotenv from 'dotenv';
+
+// db and authenticate user
 import connectDB from './db/connect.js';
 
+const app = express();
+const port = process.env.PORT || 4000;
+
 dotenv.config();
+
+// routers
+import authRouter from './routes/authRoutes.js';
 
 // middleware
 import errorHandlerMiddleware from './middleware/error-handler.js';
 import notFoundMiddleware from './middleware/not-found.js';
 
-const app = express();
-
-const port = process.env.PORT || 4000;
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('<h1>Welcome to the server!</h1>');
 });
+
+app.use('/api/v1/auth', authRouter);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
