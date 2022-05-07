@@ -1,13 +1,14 @@
-import logo from '../assets/images/logo.svg';
+import { Link } from 'react-router-dom';
 import mainImg from '../assets/images/main.svg';
+import Wrapper from '../assets/styledComponents/HomePageStyle';
+import { Logo } from '../components';
 
 const Home = () => {
   return (
-    <main>
+    <Wrapper>
       <nav>
-        <img src={logo} alt="Waly" className="logo" />
+        <Logo />
       </nav>
-
       <div className="container page">
         <div className="info">
           <h1>
@@ -19,12 +20,15 @@ const Home = () => {
             Gluten-free YOLO mumblecore af direct trade shaman humblebrag ramps
             butcher XOXO.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
 
         <img src={mainImg} alt="Job tracking" className="img main-img" />
       </div>
-    </main>
+    </Wrapper>
   );
 };
+
 export default Home;
