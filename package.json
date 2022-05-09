@@ -1,12 +1,14 @@
 {
   "name": "waly-tracking",
   "version": "1.0.0",
-  "description": "Track application submission ",
+  "description": "Track my Job Search",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client \""
+
   },
   "keywords": [
     "MongoDB",
@@ -19,13 +21,16 @@
   "author": "Abdoulaye Binta Bah",
   "license": "MIT",
   "devDependencies": {
+    "concurrently": "^7.1.0",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.0",
     "express": "^4.18.0",
     "express-async-errors": "^3.1.1",
     "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.1",
     "validator": "^13.7.0"
   }

@@ -21,7 +21,11 @@ import notFoundMiddleware from './middleware/not-found.js';
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('<h1>Welcome to the server!</h1>');
+  res.json({ msg: 'Welcome' });
+});
+
+app.get('/api/v1', (req, res) => {
+  res.json({ msg: 'API' });
 });
 
 app.use('/api/v1/auth', authRouter);
