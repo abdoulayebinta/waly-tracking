@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import mainImg from '../assets/images/main.svg';
-import Wrapper from '../assets/wrappers/HomePage';
+import Wrapper from '../assets/styledComponents/HomePageStyle';
 import { Logo } from '../components';
 
 const Home = () => {
@@ -19,7 +20,9 @@ const Home = () => {
             Gluten-free YOLO mumblecore af direct trade shaman humblebrag ramps
             butcher XOXO.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
 
         <img src={mainImg} alt="Job tracking" className="img main-img" />
