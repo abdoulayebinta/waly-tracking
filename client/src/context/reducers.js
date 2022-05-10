@@ -23,6 +23,34 @@ const reducer = (state, action) => {
       alertText: '',
     };
   }
+  if (action.type === REGISTER_USER_BEGIN) {
+    return { ...state, isLoading: true };
+  }
+  if (action.type === REGISTER_USER_SUCCESS) {
+    const { token, user, userLocation, jobLocation } = action.payload;
+    return {
+      ...state,
+      isLoading: false,
+      token,
+      user,
+      userLocation,
+      jobLocation,
+      showAlert: true,
+      alertType: 'success',
+      alertText: 'User Created! Redirecting...',
+    };
+  }
+  if (action.type === REGISTER_USER_ERROR) {
+    const { token, user, userLocation, jobLocation } = action.payload;
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: 'danger',
+      alertText: action.payload.msg,
+    };
+  }
+
   throw new Error(`no such action: ${action.type}`);
 };
 
