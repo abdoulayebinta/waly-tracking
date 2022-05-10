@@ -27,21 +27,20 @@ const reducer = (state, action) => {
     return { ...state, isLoading: true };
   }
   if (action.type === REGISTER_USER_SUCCESS) {
-    const { token, user, userLocation, jobLocation } = action.payload;
+    const { token, user, location } = action.payload;
     return {
       ...state,
       isLoading: false,
       token,
       user,
-      userLocation,
-      jobLocation,
+      userLocation: location,
+      jobLocation: location,
       showAlert: true,
       alertType: 'success',
       alertText: 'User Created! Redirecting...',
     };
   }
   if (action.type === REGISTER_USER_ERROR) {
-    const { token, user, userLocation, jobLocation } = action.payload;
     return {
       ...state,
       isLoading: false,
