@@ -7,6 +7,9 @@ import {
   LOGIN_USER_BEGIN,
   LOGIN_USER_SUCCESS,
   LOGIN_USER_ERROR,
+  SETUP_USER_BEGIN,
+  SETUP_USER_SUCCESS,
+  SETUP_USER_ERROR,
 } from './actions';
 
 const reducer = (state, action) => {
@@ -71,6 +74,34 @@ const reducer = (state, action) => {
     };
   }
   if (action.type === LOGIN_USER_ERROR) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: 'danger',
+      alertText: action.payload.msg,
+    };
+  }
+
+  if (action.type === SETUP_USER_BEGIN) {
+    return { ...state, isLoading: true };
+  }
+  if (action.type === SETUP_USER_SUCCESS) {
+    const { token, user, location, alertText } = action.payload;
+
+    return {
+      ...state,
+      isLoading: false,
+      token,
+      user,
+      userLocation: location,
+      jobLocation: location,
+      showAlert: true,
+      alertType: 'success',
+      alertText,
+    };
+  }
+  if (action.type === SETUP_USER_ERROR) {
     return {
       ...state,
       isLoading: false,
