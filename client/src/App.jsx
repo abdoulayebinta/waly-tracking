@@ -1,11 +1,18 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Home, Dashboard, Register, NotFound } from './pages';
+import { Home, Register, NotFound } from './pages';
+import {
+  AddJob,
+  AllJobs,
+  Profile,
+  SharedLayout,
+  Stats,
+} from './pages/dashboard';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<div>dashboard</div>} />
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound />} />
