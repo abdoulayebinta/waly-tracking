@@ -20,7 +20,7 @@ const Home = () => {
             Gluten-free YOLO mumblecore af direct trade shaman humblebrag ramps
             butcher XOXO.
           </p>
-          <Link to="/" className="btn btn-hero">
+          <Link to="/register" className="btn btn-hero">
             Login/Register
           </Link>
         </div>
