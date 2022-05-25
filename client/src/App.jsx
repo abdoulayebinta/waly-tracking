@@ -1,16 +1,30 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Home, Dashboard, Register, NotFound } from './pages';
+import { Home, Register, NotFound, ProtectedRoute } from './pages';
+import {
+  AddJob,
+  AllJobs,
+  Profile,
+  SharedLayout,
+  Stats,
+} from './pages/dashboard';
 
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to="/">Dashboard</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/home">Home</Link>
-      </nav>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <SharedLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Stats />} />
+          <Route path="all-jobs" element={<AllJobs />} />
+          <Route path="add-job" element={<AddJob />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound />} />
