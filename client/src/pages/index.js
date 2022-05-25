@@ -1,6 +1,6 @@
 import Home from './Home';
-import Dashboard from './Dashboard';
 import Register from './Register';
 import NotFound from './NotFound';
+import ProtectedRoute from './ProtectedRoute';
 
-export { Home, Dashboard, Register, NotFound };
+export { Home, Register, NotFound, ProtectedRoute };
