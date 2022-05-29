@@ -1,4 +1,4 @@
-const Job = () => {
-  return <h2>Job Info</h2>;
+const Job = ({ company }) => {
+  return <h5>{company}</h5>;
 };
 export default Job;
