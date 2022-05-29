@@ -5,6 +5,8 @@ import Navbar from './Navbar.jsx';
 import BigSidebar from './BigSidebar.jsx';
 import SmallSidebar from './SmallSidebar.jsx';
 import FormRowSelect from './FormRowSelect.jsx';
+import SearchContainer from './SearchContainer.jsx';
+import JobsContainer from './JobsContainer.jsx';
 
 export {
   Logo,
@@ -14,4 +16,6 @@ export {
   BigSidebar,
   SmallSidebar,
   FormRowSelect,
+  SearchContainer,
+  JobsContainer,
 };
