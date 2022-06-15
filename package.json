@@ -1,5 +1,5 @@
 {
-  "name": "waly-tracking-app",
+  "name": "waly-tracking",
   "version": "1.0.0",
   "description": "Track my Job Search",
   "main": "server.js",
