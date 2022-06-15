@@ -4,7 +4,7 @@ import { useAppContext } from '../../context/appContext';
 import Wrapper from '../../assets/styledComponents/DashboardFormPage';
 
 const Profile = () => {
-  const { isEditing, user, showAlert, displayAlert, updateUser, isLoading } =
+  const { user, showAlert, displayAlert, updateUser, isLoading } =
     useAppContext();
 
   const [name, setName] = useState(user?.name);

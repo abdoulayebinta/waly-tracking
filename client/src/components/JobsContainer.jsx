@@ -5,10 +5,11 @@ import Job from './Job';
 import Wrapper from '../assets/styledComponents/JobsContainer';
 
 const JobsContainer = () => {
-  const { getJobs, jobs, isLoading, page, totalJobs } = useAppContext();
+  const { getJobs, jobs, isLoading, totalJobs } = useAppContext();
 
   useEffect(() => {
     getJobs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (isLoading) {
     return <Loading center />;
