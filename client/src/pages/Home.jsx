@@ -14,12 +14,7 @@ const Home = () => {
           <h1>
             job <span>tracking</span> app
           </h1>
-          <p>
-            I'm baby glossier hashtag selfies green juice, chillwave cliche
-            venmo pug vice. Butcher leggings +1 deep v ethical vinyl.
-            Gluten-free YOLO mumblecore af direct trade shaman humblebrag ramps
-            butcher XOXO.
-          </p>
+          <p>A Job tracking app to track job application.</p>
           <Link to="/register" className="btn btn-hero">
             Login/Register
           </Link>
